@@ -1,18 +1,3 @@
-# ecrire un programe qui calcule la puissance d'un nombre
-# pour ce faire il demande d'entrer un nombtr ainsi que la puissance
-# voulue pour ce nombre. le calcule devra se faire en passant
-# par une fonction qui recevra les deuxs valeurs en parametres.
-# afficher le resultat de facon soignée
-def calcul_puissance(nombre, puissance):
-    nombre ** puissance
-    print(nombre ** puissance)
-
-
-nombre = int(input("entrer un nombre "))
-puissance = int(input("Entrer la puissance desiré "))
-
-calcul_puissance(nombre, puissance)
-
 
 # exercice 3 liste 1
 
@@ -37,6 +22,8 @@ def multiple_3_5(p_nombre):
 # programe principale
 try:
     nbr = int(input("Entrer un nombre "))
+    if nbr == 0:
+        print("entrer un nombre sictement positif...")
     # traitement
     résultat = multiple_3_5(nbr)
     print("le résulat:", résultat)
@@ -44,8 +31,6 @@ try:
 # sortie de données : affichage
 except ValueError:
     print("entrer un nombre positif")
-except :
-    print("une éxception a ete généré")
 else:
     if résultat == 1:
         print("le nombre est un multiple de trois")
